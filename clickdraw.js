@@ -1,7 +1,7 @@
 /*
 Yuyang Zhang
 Softdev2 pd07
-HW#00 - Canvas
+HW#00 - See a Red Door...
 2018-02-03
 */
 
