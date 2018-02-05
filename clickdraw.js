@@ -1,7 +1,7 @@
 /*
 Yuyang Zhang
 Softdev2 pd07
-HW#01
+HW#00 - Canvas
 2018-02-03
 */
 
