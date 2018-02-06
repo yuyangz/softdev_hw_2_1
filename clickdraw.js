@@ -11,26 +11,37 @@ var c = document.getElementById("slate");
 var ctx = c.getContext("2d");
 
 var q = 0;
+var x1,y1,x2,y2;
 
-  var circle = function(e){
-    var x = e.offsetX;
-    var y = e.offsetY;
+
+
+var circle = function(e){
+    e.preventDefault();
+    x1 = e.offsetX;
+    y1 = e.offsetY;
     ctx.beginPath()
-    ctx.arc(x,y, 10, 0, 2*Math.PI)
+    ctx.arc(x2,y2, 10, 0, 2*Math.PI)
+    ctx.moveTo(x1,y1)
+    ctx.lineTo(x2,y2)
     ctx.stroke()
-  }
+    x2 = x1;
+    y2 = y1;
+}
+
 
 var rect = function(e){
-  var x = e.offsetX;
-  var y = e.offsetY;
-  ctx.fillRect(x,y, 10, 10)
+    e.preventDefault();
+    var x = e.offsetX;
+    var y = e.offsetY;
+    ctx.fillRect(x,y, 10, 10)
 }
 
 
 //uses the previous two functions as helper functions
 var draw = function(e){
-  if (q == 0){
-      circle(e);
+    if (q == 0){
+	circle(e);
+	circle(e);	
   }
   else{
       rect(e);
